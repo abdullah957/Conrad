@@ -1,5 +1,4 @@
 $(function() {
-
     // Add Active Class To navBar
     //When Click on menu Sign
     $("header .container .open ").click(function() {
@@ -15,19 +14,19 @@ $(function() {
 
     });
     // Change Header Background When scroll
-    $(window).scroll(function() {
+    $(window).on("scroll load",function() {
             if ($(window).scrollTop() >= 100 && $(window).scrollTop() < $(".about").offset().top) {
                 $("header").fadeOut(300)
             } else if ($(window).scrollTop() >= $(".about").offset().top) {
                 $("header").fadeIn(700)
                 $("header").css({ "background": "#000" })
-            } else {
+            } 
+            else {
                 $("header").fadeIn(800)
                 $("header").css({ "background": "transparent" })
             }
         })
       
-
 
     //Add padding To Home Section
     $("body .sync .container ,body .contact .container .down").css({
@@ -97,9 +96,7 @@ $(function() {
         $(this).addClass("active").siblings().removeClass("active")
 
     })
-$(window).on("load",function(){
-    $("body .home-container").find(".translate").css("transform","translateX(0)")
-})
+
 //declear variables of blog section
 span1=Number($(".blog .container .right .number-container>div span:nth-child(1)")[0].innerText);
 span2=Number($(".blog .container .right .number-container>div span:nth-child(1)")[1].innerText);
@@ -109,10 +106,6 @@ $(".blog .container .right .number-container>div span:nth-child(1)")[0].innerTex
 $(".blog .container .right .number-container>div span:nth-child(1)")[1].innerText="";
 $(".blog .container .right .number-container>div span:nth-child(1)")[2].innerText="";
 $(".blog .container .right .number-container>div span:nth-child(1)")[3].innerText="";
-console.log(span1)
-console.log(span2)
-console.log(span3)
-console.log(span4)
 $(window).on("scroll",function(){
     //show content div in writer section on scroll
     if($(window).scrollTop() >= $("body .writer").offset().top){
@@ -158,3 +151,4 @@ $("body .footer").find(".scroll-to-top").click(function(e){
     },1000)
 })
 });
+
