@@ -407,13 +407,7 @@
                             padding-top: 5rem;
                         }
                         .home .container .content .translate{transition: .7s ease-out;}
-                        .home .container .content .translate:nth-child(odd) {
-                            transform: translateX(100%);
-                        }
-                        .home .container .content .translate:nth-child(even) {
-                            transform: translateX(-100%);
-
-                        }
+                      
                         
                         .home .container .content>span {
                             font-size: 50px;
